@@ -1,10 +1,27 @@
 package UNIDAD3;
 
 public class Personaje {
+
+    
+
     private String nombre;
     private int vida;
-    //private int armadura;
+    private int armadura;
     protected int creditos;
+
+    public Personaje() {
+        this.nombre = "Generado";
+        this.vida = (int)(Math.random()*100)+1;
+        this.armadura = 100;
+        this.creditos = 30;
+    }
+
+    public Personaje(String nombre, int vida, int armadura, int creditos) {
+        this.nombre = nombre;
+        this.vida = vida;
+        this.armadura = armadura;
+        this.creditos = creditos;
+    }
 
     public int getVida() {
         return vida;
@@ -22,6 +39,14 @@ public class Personaje {
         nombre = nombreRecibido;
     }
 
+    public int getArmadura() {
+        return armadura;
+    }
+
+    public void setArmadura(int armadura) {
+        this.armadura = armadura;
+    }
+
     public int getCreditos() {
         return this.creditos;
     }
@@ -30,5 +55,19 @@ public class Personaje {
         this.creditos = creditos;
     }
 
+    @Override
+    public String toString() {
+        String salida = "*****************************************\n";
+        salida += "Nombre: " + this.nombre + "\n";
+        salida += "Vida: " + this.vida + "\n";
+        salida += "Armadura: " + this.armadura + "\n";
+        salida += "Creditos: " + this.creditos + "\n";
+
+        salida += "*****************************************";
+
+
+        return salida;
+
+    }
 
 }

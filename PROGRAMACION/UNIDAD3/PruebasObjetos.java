@@ -17,21 +17,24 @@ public class PruebasObjetos {
          * Esto llama al constructor por defecto.
          */
         Personaje fran = new Personaje();
+        Personaje maria = new Personaje("Maria", 95, 0, 50);
 
         fran.setNombre("Francisco");
-        //fran.armadura = 100;
+        fran.setArmadura(100);
         fran.setVida(20);
         fran.setCreditos(0);
 
-        System.out.println("Fran tiene " + fran.getVida() + " puntos de vida");
+        System.out.println(fran.getNombre() + " tiene " + fran.getVida() + " puntos de vida, " + fran.getArmadura() + " de armadura, " + fran.getVida() + " de vida y " + fran.getCreditos() + " creditos.");
 
         fran.setVida(100);
 
-        System.out.println("Fran tiene " + fran.getVida() + " puntos de vida");
+        System.out.println(fran.getNombre() + " tiene " + fran.getVida() + " puntos de vida, " + fran.getArmadura() + " de armadura, " + fran.getVida() + " de vida y " + fran.getCreditos() + " creditos.");
 
-        System.out.println("Datos de Fran: " + fran);
+        System.out.println(maria.getNombre() + " tiene " + maria.getVida() + " puntos de vida, " + maria.getArmadura() + " de armadura, " + maria.getVida() + " de vida y " + maria.getCreditos() + " creditos.");
 
+        System.out.println();
 
+        System.out.println(fran);
 
 
     }
