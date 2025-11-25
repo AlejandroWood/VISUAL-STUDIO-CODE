@@ -15,7 +15,7 @@ public class Arma {
     public Arma() {
         this.nombre = "Pistola";
         this.peso = 2;
-        this.tipo = this.CORTA_DISTANCIA;
+        //this.tipo = this.CORTA_DISTANCIA;
         this.danio = 20;
     }
 
