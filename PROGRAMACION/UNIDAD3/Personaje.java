@@ -1,13 +1,25 @@
 package UNIDAD3;
 
+//import java.util.ArrayList;
+
 public class Personaje {
 
-    
+    public static final int MAX_ARMAS = 3;
+    public static final int EXITO = 0;
+    public static final int FRACASO = -1;
+    public static final int ERROR_CARGADO = -1;
+
+    public static final int GUERRERO = 1;
+    public static final int MAGO = 2;
+    public static final int FRANCOTIRADOR = 3;
 
     private String nombre;
     private int vida;
     private int armadura;
+    //private int clase;
     protected int creditos;
+
+    //private ArrayList<Arma> listaArmas;
 
     public Personaje() {
         this.nombre = "Generado";
@@ -22,6 +34,32 @@ public class Personaje {
         this.armadura = armadura;
         this.creditos = creditos;
     }
+
+    /**
+     * Esta función recibe un arma y se la intenta asignar al personaje, los magos
+     * solo
+     * equipan armas de largo alcance, los francotiradores largo alcance o explosiva
+     * si no lleva armadura
+     * y los guerreros corto alcance y explosiva si tiene más de 20 puntos de vida.
+     * Sólo puede equipar el arma si no a alacanzado la cantidad de armas máximas.
+     * 
+     * @param arma
+     * @return
+    */
+
+    //public int equiparArma(Arma arma){
+        //if ((clase == MAGO && arma.getTipo() == Arma.LARGA_DISTANCIA) 
+        //|| (clase == FRANCOTIRADOR && (arma.getTipo() == Arma.LARGA_DISTANCIA 
+        //|| (arma.getTipo() == Arma.EXPLOSIVA && this.armadura == 0) 
+        //|| (clase == GUERRERO && (arma.getTipo() == Arma.CORTA_DISTANCIA || 
+        //(arma.getTipo()==Arma.EXPLOSIVA && this.vida > 20)))))) {
+            //if (listaArmas.size()<this.MAX_ARMAS){
+                //this.listaArmas.add(arma);
+            //} else return ERROR_CARGADO;
+        //}else return FRACASO;
+
+        //return EXITO;
+    //}
 
     public int getVida() {
         return vida;

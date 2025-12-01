@@ -1,5 +1,8 @@
 package UNIDAD3;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class Utilidades {
     
     //modificadores tipo_devuelve nombre_funcion (parametros)
@@ -17,5 +20,20 @@ public class Utilidades {
         return suma;
     }
 
-    
+    public static int suma(ArrayList<Integer> listaNumeros) {
+        int suma = 0;
+
+        Iterator<Integer> it = listaNumeros.iterator();
+        while (it.hasNext()){
+            suma = suma + it.next();
+        }
+
+        for (Integer num: listaNumeros){
+            suma = suma + num;
+        }
+        for (int i=0;i<listaNumeros.size();i++){
+            suma = suma + listaNumeros.get(i);
+        }
+        return suma;
+    }
 }

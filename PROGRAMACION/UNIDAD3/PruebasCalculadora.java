@@ -1,5 +1,7 @@
 package UNIDAD3;
 
+import java.util.ArrayList;
+
 public class PruebasCalculadora {
     public static void main(String[] args) {
 
@@ -8,5 +10,18 @@ public class PruebasCalculadora {
         int[] listaNumeros = {3 , 4 , 23 , 123 , 123};
 
         System.out.println("La suma de los elementos del array es: " + Utilidades.suma(listaNumeros));
+
+        ArrayList<Integer> numeros = new ArrayList<Integer>();
+
+        for (int i = 0; i <1000;i++){
+            int aleatorio = (int)(Math.random()*10);
+            numeros.add(aleatorio);
+        }
+
+        if (numeros.contains(8)){
+            System.out.println("Por el culo te la hinco");
+        }
+
+        System.out.println("La suma de los elementos del array es: " + Utilidades.suma(numeros));
     }
 }
