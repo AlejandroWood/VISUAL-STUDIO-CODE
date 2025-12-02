@@ -35,6 +35,7 @@ public class ExamenRecuperacion {
 
         //Se repetirá está condición hasta que se hayan registrado todas las pociones
         for (int i = 0; i < pocionesRegistradas; i++) {
+            System.out.println("Poción " + (i + 1) + ":");
             //Le pide al usuario que introduzca el nombre de la poción
             //y la guarda en su respectiva posición
             System.out.print("Introduzca el nombre de la poción: ");
