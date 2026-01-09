@@ -21,9 +21,9 @@ public class Tragaperras {
             monedas = 0;
             totalMonedas = totalMonedas - 5;
 
-            rodillo1 = (int)(Math.random()*1) + 7;
-            rodillo2 = (int)(Math.random()*1) + 7;
-            rodillo3 = (int)(Math.random()*1) + 7;
+            rodillo1 = (int)(Math.random()*7) + 1;
+            rodillo2 = (int)(Math.random()*7) + 1;
+            rodillo3 = (int)(Math.random()*7) + 1;
 
             System.out.println(rodillo1 + " | " + rodillo2 + " | " + rodillo3);
 
