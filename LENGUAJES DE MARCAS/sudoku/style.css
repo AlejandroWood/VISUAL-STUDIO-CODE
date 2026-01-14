@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f9;
+}
+
+.main-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.game-area {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del tablero */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    border: 3px solid black; /* Borde exterior grueso */
+}
+
+/* Estilo general de cada celda/botón */
+.cell {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 0.5px solid #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.cell:hover { background-color: #eee; }
+.cell.selected { background-color: #d1eaff; border: 2px solid #007bff; }
+
+/* --- DIVISIONES DE 3x3 --- */
+
+/* Líneas verticales cada 3 columnas */
+.cell:nth-child(3n) {
+    border-right: 3px solid black;
+}
+/* Quitar el borde extra a la última columna para no chocar con el borde exterior */
+.cell:nth-child(9n) {
+    border-right: 0.5px solid #ccc;
+}
+
+/* Líneas horizontales cada 3 filas */
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 3px solid black;
+}
+
+/* Teclado numérico */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 8px;
+}
+
+.keypad button {
+    height: 60px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.btn-clear-cell { grid-column: span 3; background-color: #ffcccc; }
+
+/* Botones de acción */
+.controls { margin-top: 30px; }
+.controls button {
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-solve { background-color: #28a745; }
+.btn-reset { background-color: #dc3545; }

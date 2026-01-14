@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Sudoku Solver</h1>
+        
+        <div class="game-area">
+            <div id="grid" class="grid"></div>
+
+            <div class="sidebar">
+                <div class="keypad">
+                    <button onclick="setNumber(1)">1</button>
+                    <button onclick="setNumber(2)">2</button>
+                    <button onclick="setNumber(3)">3</button>
+                    <button onclick="setNumber(4)">4</button>
+                    <button onclick="setNumber(5)">5</button>
+                    <button onclick="setNumber(6)">6</button>
+                    <button onclick="setNumber(7)">7</button>
+                    <button onclick="setNumber(8)">8</button>
+                    <button onclick="setNumber(9)">9</button>
+                    <button onclick="setNumber(0)" class="btn-clear-cell">Borrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-solve" onclick="solveSudoku()">Resolver Sudoku</button>
+            <button class="btn-reset" onclick="clearBoard()">Limpiar Todo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
