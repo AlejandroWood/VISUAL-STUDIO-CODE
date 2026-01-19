@@ -1,4 +1,4 @@
-package UNIDAD3;
+package UNIDAD3.Random;
 
 import javax.swing.*;
 import javax.swing.text.*;

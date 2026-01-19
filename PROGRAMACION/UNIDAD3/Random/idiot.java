@@ -1,4 +1,4 @@
-package UNIDAD3;
+package UNIDAD3.Random;
 
 public class idiot {
     public static void main(String[] args) {

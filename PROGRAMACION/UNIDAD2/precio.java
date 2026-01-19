@@ -53,7 +53,7 @@ public class precio {
         double totalFinal = precioConDescuento * numEntradas;
         totalFinal = precioBase - totalFinal;
 
-        System.out.println("Total a pagar: " + totalFinal);
+        System.out.println("Total a pagar: " + totalFinal + " euros.");
         }
 
         teclado.close();
