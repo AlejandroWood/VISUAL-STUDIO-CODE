@@ -42,7 +42,7 @@ ENGINE = InnoDB;
 
 -- -----------------------------------------------------
 -- Table `peliculas_marcadiz`.`pelicula_has_actor`
--- -----------------------------------------------------
+-- -----------------------------------------------------a
 CREATE TABLE IF NOT EXISTS `peliculas_marcadiz`.`pelicula_has_actor` (
   `pelicula_id` INT NOT NULL,
   `actor_id` INT NOT NULL,
