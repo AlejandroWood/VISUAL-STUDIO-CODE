@@ -8,9 +8,7 @@ public class CarreraCaracoles2 {
         int caracol1 = 0;
         int caracol2 = 0;
         int caracol3 = 0;
-        int dinero = 100;
-        int apuesta = 0;
-        int apuestaCaracol = 0;
+        int cantidad = 0;
 
         int tiradaCaracol1 = 0;
         int tiradaCaracol2 = 0;
@@ -37,9 +35,28 @@ public class CarreraCaracoles2 {
         System.out.print("Diga (Si) para empezar: ");
         continuar = teclado.next();
         continuar = "Si";
-        System.out.println("Tiene " + dinero + " euros.");
+
+        System.out.print("Cántidad de jugadores que van a jugar: ");
+        cantidad = teclado.nextInt();
+
+        String[] jugadores = new String[cantidad];
+        int[] dinero = new int[cantidad];
+        int[] apuestaCaracol = new int[cantidad];
+        int apuesta = 0;
+        int total = 0;
+
+        for (int x = 0; x <= (cantidad - 1);  x++) {
+            System.out.println();
+            System.out.println("Jugador " + (x + 1) + ":");;
+            System.out.print("Introduzca su nombre: ");
+            jugadores[x] = teclado.next();
+            dinero[x] = 100;
+            System.out.println(jugadores[x] + " tiene " + dinero[x] + " euros.");
+        }
 
         while (continuar.equalsIgnoreCase("si")) {
+            apuesta = 0;
+            total = 0;
             tiradaCaracol1 = 0;
             tiradaCaracol2 = 0;
             tiradaCaracol3 = 0;
@@ -62,19 +79,30 @@ public class CarreraCaracoles2 {
             caracol1 = 0;
             caracol2 = 0;
             caracol3 = 0;
-            System.out.print("Introduca la cantidad de dinero que quiere apostar: ");
-            apuesta = teclado.nextInt();
-            while (apuesta > dinero) {
-                System.out.print("No puede apostar una cantidad de dinero mayor a la que dispone, introduzca otra apuesta: ");
+            System.out.println();
+            
+            for (int x = 0;  x <= (cantidad -1); x++) {
+                System.out.print("Cantidad que " + jugadores[x] + " quiere apostar. (Tiene " + dinero[x] + " euros): ");
                 apuesta = teclado.nextInt();
+                while (apuesta > dinero[x]) {
+                    System.out.print("No puede apostar una cantidad de dinero mayor a la que dispone, introduzca otra apuesta: ");
+                    apuesta = teclado.nextInt();
+                }
+
+                dinero[x] = dinero[x] - apuesta;
+                total = total + apuesta;
+                System.out.println();
+
+                System.out.print("Introduca el número del caracol por el que quiere apostar: ");
+                apuestaCaracol[x] = teclado.nextInt();
+
+                while (apuestaCaracol[x] < 1 || apuestaCaracol[x] > 3) {
+                    System.out.print("Introduzca un número válido: ");
+                    apuestaCaracol[x] = teclado.nextInt();
+                }
+                System.out.println();
             }
-            dinero = dinero - apuesta;
-            System.out.print("Introduca el número del caracol por el que quiere apostar: ");
-            apuestaCaracol = teclado.nextInt();
-            while (apuestaCaracol < 1 || apuestaCaracol > 3) {
-                System.out.print("Introduzca un número válido: ");
-                apuestaCaracol = teclado.nextInt();
-            }
+
                 while (ganador) {
                     tiradaCaracol1 = (int) (Math.random() * 4);
                     tiradaCaracol2 = (int) (Math.random() * 4);
@@ -210,55 +238,60 @@ public class CarreraCaracoles2 {
 
                 }
 
+
+                int caracolGanador = 0;
                 String primerPuesto = "";
-                boolean ganaApuesta = true;
                 if (caracol1 > caracol2 && caracol1 > caracol3) {
                     primerPuesto = "caracol 1.";
-                    if (apuestaCaracol == 1) {
-                        ganaApuesta = true;
-                    } else {
-                        ganaApuesta = false;
-                    }
+                    caracolGanador = 1;
                 } else if (caracol2 > caracol3) {
                     primerPuesto = "caracol 2.";
-                    if (apuestaCaracol == 2) {
-                        ganaApuesta = true;
-                    } else {
-                        ganaApuesta = false;
-                    }
+                    caracolGanador = 2;
                 } else {
                     primerPuesto = "caracol 3.";
-                    if (apuestaCaracol == 3) {
-                        ganaApuesta = true;
-                    } else {
-                        ganaApuesta = false;
-                    }
+                    caracolGanador = 3;
                 }
 
                 System.out.println("Ha ganado el " + primerPuesto);
 
-                if (ganaApuesta) {
-                    apuesta = apuesta * 10;
-                    dinero = dinero + apuesta;
-                    System.out.println("Ha ganado la apuesta y ha ganado " + apuesta + " euros.");
-                    apuesta = 0;
-                } else {
-                    System.out.println("Ha perdido la apuesta y ha perdido " + apuesta + " euros.");
-                    apuesta = 0;
+                int contador2 = 0;
+
+                System.out.println("Jugadores que han ganado la apuesta:");
+                for (int x = 0; x < cantidad; x++) {
+                    if (apuestaCaracol[x] == caracolGanador) {
+                        System.out.println(jugadores[x]);
+                        contador2++;
+                    }
+                }
+                if (contador2 == 0) {
+                    System.out.println("Nadie");
+                }
+                contador2 = 0;
+                System.out.println();
+
+                for (int x = 0; x < cantidad; x++) {
+                    if (apuestaCaracol[x] == caracolGanador) {
+                        dinero[x] = dinero[x] + total;
+                        System.out.println(jugadores[x] + " ha ganado la apuesta y ahora tiene " + dinero[x] + " euros." );
+                    } else {
+                        System.out.println(jugadores[x] + " ha perdido la apuesta y ahora tiene " + dinero[x] + " euros." );
+                    }
                 }
 
-                System.out.println("Tiene un total de " + dinero + " euros.");
+                total = 0;
 
                 System.out.print("Introduzca (Si) si quiere volver a jugar: ");
                 continuar = teclado.next();
 
-                if (dinero == 0 && continuar.equalsIgnoreCase("si")) {
-                        System.out.println("No le queda dinero, no puede jugar otra vez");
+                for (int x = 0; x < cantidad; x++) {
+                    if (dinero[x] == 0 && continuar.equalsIgnoreCase("si")){
                         continuar = "No";
+                        System.out.println("A uno de los jugadores no le queda dinero y no se podrá jugar otra vez.");
+                    }
+                System.out.println();
                 }
-        }
-        System.out.println("Adios");
-        
+                System.out.println("Adios");
+            }
         teclado.close();
 
     }
