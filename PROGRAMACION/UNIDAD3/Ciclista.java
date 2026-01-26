@@ -1,6 +1,6 @@
 package UNIDAD3;
 
-import java.util.Random;
+//import java.util.Random;
 
 /**
  * Ciclista.java (1.5 puntos)

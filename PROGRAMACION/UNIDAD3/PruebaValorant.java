@@ -24,9 +24,9 @@ public class PruebaValorant {
 
         Quest gallinas = new Quest("100 rupias", "Gallinas Perdidas", "Busca las gallinas", LocalDate.now(),
                 Quest.FACIL);
-        Quest CaracolGigante = new Quest("1000 rupias y la mano del hijo del rey", "El Calabozo del Caracol Gigante",
-                "Desde tiempos inmemoriales el calabozo del caracol gigante jamas ha sido completado, nadie ha pasado del nivel 3, seras capaz de conseguir la concha magica del caracol",
-                LocalDate.now(), Quest.MUELTO);
+        //Quest CaracolGigante = new Quest("1000 rupias y la mano del hijo del rey", "El Calabozo del Caracol Gigante",
+                //"Desde tiempos inmemoriales el calabozo del caracol gigante jamas ha sido completado, nadie ha pasado del nivel 3, seras capaz de conseguir la concha magica del caracol",
+                //LocalDate.now(), Quest.MUELTO);
 
         // Una vez tenemos un LocalDate, hay muchas funciones para cambiar el dia o el
         // mes etc..

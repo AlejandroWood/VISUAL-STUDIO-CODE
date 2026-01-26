@@ -1,7 +1,7 @@
 package UNIDAD3;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+//import java.util.Comparator;
 
 /**
  * 
@@ -130,8 +130,8 @@ public class EquipoCiclista {
             }
         }
         // Con Stream calculamos el maximo indicandole que compare por el peso
-        Ciclista ciclistaPesado = this.listaCiclistas.stream().max(Comparator.comparingDouble(Ciclista::getPeso))
-                .orElse(null);
+        //Ciclista ciclistaPesado = this.listaCiclistas.stream().max(Comparator.comparingDouble(Ciclista::getPeso))
+                //.orElse(null);
         // Otra mas Convertimos a stream filtramos solo el peso y calculamos el maximo
         return listaCiclistas.stream().mapToDouble(Ciclista::getPeso).max().orElse(0.0);
     }
@@ -140,12 +140,12 @@ public class EquipoCiclista {
     // ciclistas de la especialidad indicada.
 
     public int numCiclistas(int especialidad) {
-        int cantidadEspecialidad = 0;
+        //int cantidadEspecialidad = 0;
 
         for (int i = 0; i < listaCiclistas.size(); i++) {
 
             if (listaCiclistas.get(i).getEspecialidad() == especialidad) {
-                cantidadEspecialidad++;
+                //cantidadEspecialidad++;
             }
 
         }
