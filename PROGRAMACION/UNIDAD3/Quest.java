@@ -15,7 +15,6 @@ public class Quest implements Comparable<Quest> {
     private LocalDate fechaFin;
     private int dificultad;
 
-    // TODO Hacer el constructor vacio y el que recibe todos los parametros de quest
     public Quest() {
 
     }

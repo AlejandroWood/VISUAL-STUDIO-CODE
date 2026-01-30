@@ -77,7 +77,7 @@ public class Utilidades {
 
     }
 
-    // TODO SUBIRNOTA
+
     /* Funcion recursiva que calcule el máximo de un array */
 
 }
