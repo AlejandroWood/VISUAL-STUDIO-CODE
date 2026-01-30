@@ -1,4 +1,4 @@
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Farrah Petty",218,2,"Palma de Mallorca"),
   ("Adena Barnes",52,2,"Elx"),
@@ -20,7 +20,7 @@ VALUES
   ("Roary Sharpe",371,2,"Zaragoza"),
   ("Ignacia Kaufman",396,1,"Palma de Mallorca"),
   ("Sasha Alvarez",334,2,"Ceuta");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Tate Payne",244,1,"Madrid"),
   ("Gillian Beach",175,1,"Gijón"),
@@ -42,7 +42,7 @@ VALUES
   ("Magee Fulton",195,2,"Ceuta"),
   ("Urielle Page",108,1,"Logroño"),
   ("Paloma Rowland",165,1,"Cartagena");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Nasim Kelley",214,1,"Melilla"),
   ("Eve Vincent",228,1,"Gijón"),
@@ -54,7 +54,7 @@ VALUES
   ("Tarik Sharp",387,2,"Cartagena"),
   ("Darius Santos",396,2,"Gijón"),
   ("Malachi Barrett",352,2,"San Cristóbal de la Laguna");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Marny Vaughn",192,1,"Pamplona"),
   ("Tyrone Chang",413,1,"L'Hospitalet de Llobregat"),
@@ -76,7 +76,7 @@ VALUES
   ("Roary Mccray",127,1,"Donosti"),
   ("Sybil Fry",341,1,"Dos Hermanas"),
   ("Malik Marshall",139,1,"Pamplona");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Alvin Mckenzie",173,2,"Pamplona"),
   ("Steel Mccarty",54,1,"Gijón"),
@@ -98,7 +98,7 @@ VALUES
   ("Joseph Osborn",272,2,"Santander"),
   ("Hadley Gutierrez",234,1,"Zaragoza"),
   ("Jared Hatfield",40,2,"Zaragoza");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Dominic Merritt",41,2,"Cádiz"),
   ("Jana Farmer",92,2,"Pamplona"),
@@ -110,7 +110,7 @@ VALUES
   ("Shelly Nguyen",161,1,"Melilla"),
   ("Doris Christensen",152,1,"Cáceres"),
   ("Jermaine Barker",376,1,"Santander");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Shannon Pittman",312,1,"Zaragoza"),
   ("Yolanda Weaver",105,2,"Telde"),
@@ -132,7 +132,7 @@ VALUES
   ("Callum Stevens",95,1,"Oviedo"),
   ("Paloma Powell",175,1,"Ceuta"),
   ("Cedric Fernandez",364,2,"Ourense");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Jonas Marshall",435,1,"Oviedo"),
   ("Malik Gutierrez",245,1,"Cáceres"),
@@ -154,7 +154,7 @@ VALUES
   ("Felix Bridges",427,2,"Almería"),
   ("Naomi Rice",250,1,"Cartagena"),
   ("Melinda Williamson",381,1,"Lugo");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Vincent Patterson",382,2,"Bilbo"),
   ("Gage Key",107,1,"Oviedo"),
@@ -166,7 +166,7 @@ VALUES
   ("Daryl Lopez",169,1,"Santa Cruz de Tenerife"),
   ("Hedy Gomez",53,2,"Pamplona"),
   ("Fay Burgess",243,1,"Castelló");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Rigel Osborn",393,1,"Málaga"),
   ("Eagan Graham",346,1,"Palma de Mallorca"),
@@ -188,7 +188,7 @@ VALUES
   ("Hyacinth Craig",138,1,"Marbella"),
   ("Raja Tran",317,2,"Sevilla"),
   ("Amelia Battle",432,2,"Ceuta");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Jasper Drake",427,1,"Marbella"),
   ("Orla Chambers",213,1,"Palma de Mallorca"),
@@ -210,7 +210,7 @@ VALUES
   ("Reese Roman",363,2,"Oviedo"),
   ("Laurel Lowery",270,2,"Madrid"),
   ("Leo Bond",145,1,"Málaga");
-INSERT INTO `peliculas_marcadiz` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
+INSERT INTO `peliculas_marcadiz`.`pelicula` (`titulo`,`duracion`,`clasificacion`,`sinopsis`)
 VALUES
   ("Flynn Barrera",330,2,"Oviedo"),
   ("Charles Noel",320,2,"Murcia"),
