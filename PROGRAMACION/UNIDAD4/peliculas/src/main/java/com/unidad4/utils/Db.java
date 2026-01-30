@@ -9,6 +9,7 @@ public class Db {
 
     public static final int ORDEN_ASC = 0;
     public static final int ORDEN_DESC = 1;
+    public static final int CLASIF_MENORES = 0;
 
     public static Connection conectar() {
 
