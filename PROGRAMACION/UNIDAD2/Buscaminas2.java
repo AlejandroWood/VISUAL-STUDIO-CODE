@@ -10,6 +10,8 @@ public class Buscaminas2 {
         int numCasillas = 0;
         boolean ganado = true;
         int numMinas = 0;
+        int contadorMinas = 0;
+        int minasRestantes = 0;
         int y = 0;
         int x = 0;
 
@@ -98,6 +100,8 @@ public class Buscaminas2 {
                 x = teclado.nextInt();
             }
 
+            x = x - 1;
+
             System.out.print("Introduzca la posicion y: ");
             y = teclado.nextInt();
 
@@ -106,11 +110,58 @@ public class Buscaminas2 {
                 y = teclado.nextInt();
             }
 
+            y = y - 1;
+
             if (tableroMinas[y][x] == 1){
                 terminado = true;
                 ganado = false;
             } else {
-                
+                contadorMinas = 0;
+                tableroMinas[y][x] = 2;
+                if (tableroMinas[y][x + 1] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y][x - 1] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y + 1][x] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y + 1][x + 1] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y + 1][x - 1] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y - 1][x] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y - 1][x + 1] == 1) {
+                    contadorMinas++;
+                }
+                if (tableroMinas[y - 1][x - 1] == 1) {
+                    contadorMinas++;
+                }
+
+                if (contadorMinas > 0) {
+                    tablero[y][x] = "" + contadorMinas;
+                } else {
+                    tablero[y][x] = " ";
+                }
+
+                minasRestantes = 0;
+
+                for (y = 0; numCasillas > y; y++) {
+                    for (x = 0; numCasillas > x; x++) {
+                        if (tableroMinas[y][x] == 0) {
+                            minasRestantes++;
+                        }
+                    }
+                }
+                if (minasRestantes == 0) {
+                    terminado = true;
+                    ganado = true;
+                }
             }
         }
 
