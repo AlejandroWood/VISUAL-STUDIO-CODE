@@ -1,0 +1,14 @@
+/* Todas las h2 en verde */
+h2 {
+    color: green;
+}
+
+/* h2 con clase azul */
+h2.azul {
+    color: blue;
+}
+
+/* h2 con id cabecera5 */
+#cabecera5 {
+    color: red;
+}
