@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Ejercicio 20</title>
+</head>
+<body>
+
+<h2>Información sobre el producto</h2>
+
+<form id="form4" name="form4" action="peticion.php" method="post">
+
+    <fieldset>
+        <legend>Datos básicos</legend>
+
+        Nombre <br />
+        <input type="text" id="nombre" name="nombre" size="40" />
+        <br /><br />
+
+        Descripción <br />
+        <textarea id="descripcion" name="descripcion" rows="5" cols="50"></textarea>
+        <br /><br />
+
+        Foto
+        <input type="file" id="foto" name="foto" />
+        <br /><br />
+
+        <input type="checkbox" id="contador" name="contador" />
+        Añadir contador de visitas
+        <br />
+
+    </fieldset>
+
+    <br />
+
+    <fieldset>
+        <legend>Datos económicos</legend>
+
+        Precio
+        <input type="text" id="precio" name="precio" size="6" /> €
+        
+        &nbsp;&nbsp;
+
+        Impuestos
+        <select id="impuestos" name="impuestos">
+            <option value="4">4%</option>
+            <option value="7">7%</option>
+            <option value="16">16%</option>
+            <option value="25">25%</option>
+        </select>
+
+        <br /><br />
+
+        Promoción <br />
+
+        <input type="radio" id="promo_ninguno" name="promocion" value="ninguno" />
+        Ninguno <br />
+
+        <input type="radio" id="promo_transporte" name="promocion" value="transporte" />
+        Transporte gratuito <br />
+
+        <input type="radio" id="promo_descuento" name="promocion" value="descuento5" />
+        Descuento 5% <br />
+
+    </fieldset>
+    <br>
+    <input type="submit" value="Enviar">
+
+</form>
+
+</body>
+</html>
