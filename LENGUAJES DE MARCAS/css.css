@@ -1,0 +1,64 @@
+body {
+    background-color: beige;
+}
+
+* {
+    font-style: arial;
+}
+
+p {
+    font-size: 16px;
+}
+
+h1#titulo-principal {
+    color: blue;
+    text-align: center;
+}
+
+p.intro {
+    color: gray;
+}
+
+div.contenedor {
+    background-color: lightsteelblue;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.contenedor p {
+    color: blue;
+}
+
+.contenedor span {
+    color: chartreuse;
+}
+
+.item {
+    font-size: 30px
+}
+
+ul {
+    list-style: none;
+}
+
+.item-especial {
+    color: brown;
+}
+
+ul > li {
+    color: blue;
+}
+
+ul > li:nth-child(2) {
+    color: red;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: blue;
+}
